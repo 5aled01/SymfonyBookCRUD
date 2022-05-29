@@ -3,8 +3,8 @@
 {% block title %}Auteur{% endblock %}
 
 {% block body %}
-    <h1>Auteur</h1>
-
+  <center>  <h1>Auteur</h1></center>
+<div class="container">
     <table class="table">
         <tbody>
             <tr>
@@ -26,9 +26,14 @@
         </tbody>
     </table>
 
-    <a href="{{ path('auteur_index') }}">back to list</a>
+  
 
-    <a href="{{ path('auteur_edit', {'id': auteur.id}) }}">edit</a>
-
+  <table><tbody>
+  <tr> <td>  <a href="{{ path('auteur_edit', {'id': auteur.id}) }}"  class="btn btn-info">edit</a>
+</td><td>
     {{ include('auteur/_delete_form.html.twig') }}
+</td><tr>
+</tbody></table>
+<br>
+  <a href="{{ path('auteur_index') }}" >back to list</a>
 {% endblock %}

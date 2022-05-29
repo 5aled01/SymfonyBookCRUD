@@ -3,8 +3,11 @@
 {% block title %}Auteur index{% endblock %}
 
 {% block body %}
-    <h1>Auteur index</h1>
-    <a href="{{ path('auteur_new') }}" class="btn btn-primary">Create new</a>
+   <center> <h1>Auteur index</h1> </center>
+    <div class="container">
+    
+    <a href="{{ path('auteur_new') }}" class="btn btn-outline-secondary">Create new</a>
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -34,6 +37,7 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
 
     
 {% endblock %}

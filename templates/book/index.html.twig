@@ -3,8 +3,10 @@
 {% block title %}Book index{% endblock %}
 
 {% block body %}
-    <h1>Book index</h1>
-
+   <center> <h1>Book index</h1> </center>
+<div class="container">
+<a href="{{ path('book_new') }}" class="btn btn-outline-secondary">Create new</a>
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -26,8 +28,8 @@
                 <td>{{ book.id_auteur.nom }}</td>
                 <td>{{ book.dateCreation }}</td>
                 <td>
-                    <a href="{{ path('book_show', {'id': book.id}) }}">show</a>
-                    <a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+                    <a href="{{ path('book_show', {'id': book.id}) }}" class="btn btn-info">show</a>
+                    <a href="{{ path('book_edit', {'id': book.id}) }}" class="btn btn-success">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -37,6 +39,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('book_new') }}">Create new</a>
+</div>
 {% endblock %}

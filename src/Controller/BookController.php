@@ -20,7 +20,7 @@ class BookController extends AbstractController
      */
     public function index(BookRepository $bookRepository): Response
     {
-        dd($bookRepository->search());
+     //   dd($bookRepository->search());
         return $this->render('book/index.html.twig', [
             'books' => $bookRepository->search(),
         ]);

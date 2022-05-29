@@ -64,7 +64,7 @@ class BookRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('a');
         $qb->innerJoin('a.id_auteur', 'Auteur')
              ->addSelect('Auteur')
-             ->where($qb->expr()->eq('Auteur.id', $qb->expr()->literal(1)));
+            ;
        
         return $qb->getQuery()->getResult();
     }
